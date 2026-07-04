@@ -53,9 +53,8 @@ a { color: inherit; }
 }
 .logo-chip {
   display: inline-flex; align-items: center;
-  background: var(--bone);
-  padding: 8px 14px;
-  border-radius: 2px;
+  background: transparent;
+  padding: 0;
   text-decoration: none;
 }
 .logo-chip img { height: 44px; width: auto; }
@@ -223,6 +222,84 @@ a { color: inherit; }
 .site-footer a { color: var(--bone-muted); text-decoration: none; }
 .site-footer a:hover { color: var(--bone); }
 .footer-note { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 13px; color: var(--bone-soft); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+
+/* ---------- Team ---------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+@media (max-width: 900px) { .team-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .team-grid { grid-template-columns: 1fr; } }
+.team-card { text-align: center; }
+.team-photo {
+  position: relative; overflow: hidden;
+  aspect-ratio: 3/4; border-radius: 2px;
+  border: 1px solid var(--line);
+  background: var(--ink-3);
+  margin-bottom: 16px;
+}
+.team-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.team-card:hover .team-photo img { transform: scale(1.04); }
+.team-initials {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-headline); font-weight: 700;
+  font-size: 46px; letter-spacing: 0.04em;
+  color: var(--bone-soft);
+  background: linear-gradient(160deg, var(--ink-3), var(--concrete));
+}
+.team-name { font-family: var(--font-headline); font-weight: 600; font-size: 19px; letter-spacing: 0.03em; text-transform: uppercase; }
+.team-role { color: var(--rust-soft); font-size: 14px; margin-top: 4px; }
+.team-note { color: var(--bone-soft); font-size: 13px; margin-top: 6px; }
+
+/* ---------- Event list & detail ---------- */
+.event-list { display: grid; gap: 24px; }
+.event-card {
+  display: grid; grid-template-columns: 300px 1fr;
+  gap: 0; overflow: hidden;
+  background: var(--ink-2);
+  border: 1px solid var(--line); border-radius: 2px;
+  text-decoration: none; color: inherit;
+  transition: border-color .2s, transform .2s;
+}
+.event-card:hover { border-color: var(--rust-soft); transform: translateY(-2px); }
+.event-card-media { position: relative; overflow: hidden; min-height: 200px; }
+.event-card-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.event-card:hover .event-card-media img { transform: scale(1.05); }
+.event-card-body { padding: 28px 30px; display: flex; flex-direction: column; justify-content: center; }
+.event-date {
+  font-family: var(--font-headline); font-weight: 600; font-size: 13px;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--rust-soft);
+  margin-bottom: 8px;
+}
+.event-cta {
+  font-family: var(--font-headline); font-weight: 600; font-size: 13px;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--bone);
+  margin-top: 16px; display: inline-flex; align-items: center; gap: 8px;
+}
+@media (max-width: 720px) {
+  .event-card { grid-template-columns: 1fr; }
+  .event-card-media { min-height: 220px; }
+}
+.event-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+@media (max-width: 840px) { .event-facts { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .event-facts { grid-template-columns: 1fr; } }
+.event-fact {
+  background: var(--ink-2); border: 1px solid var(--line); border-radius: 2px;
+  padding: 22px 22px 24px;
+}
+.event-fact h3 { font-family: var(--font-headline); font-weight: 600; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+.event-fact .kicker { color: var(--rust-soft); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 10px; }
+.event-fact p { color: var(--bone-muted); font-size: 15px; }
+.event-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (max-width: 840px) { .event-gallery { grid-template-columns: 1fr 1fr; } }
+.back-link {
+  font-family: var(--font-headline); font-weight: 600; font-size: 13px;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--bone-muted);
+  text-decoration: none; display: inline-flex; gap: 8px; align-items: center;
+}
+.back-link:hover { color: var(--bone); }
 
 /* ---------- Forms ---------- */
 .field { display: grid; gap: 8px; }
