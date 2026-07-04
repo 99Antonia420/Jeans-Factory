@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galerie | Jeans Factory Albstadt-Ebingen</title>
+<link rel="stylesheet" href="site.css">
+<style>
+.masonry { columns: 3; column-gap: 18px; }
+.masonry .photo { margin-bottom: 18px; break-inside: avoid; }
+@media (max-width: 900px) { .masonry { columns: 2; } }
+@media (max-width: 560px) { .masonry { columns: 1; } }
+.lightbox {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(14,14,16,0.94);
+  display: none; align-items: center; justify-content: center;
+  padding: 40px; cursor: zoom-out;
+}
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo-chip" href="index.html"><img src="assets/logo-jeansfactory.png" alt="Jeans Factory – for every body"></a>
+  <button class="nav-toggle" aria-label="Menü">☰</button>
+  <nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="ueber-uns.html">Über uns</a>
+    <a href="galerie.html" class="active">Galerie</a>
+    <a href="oeffnungszeiten.html">Öffnungszeiten</a>
+    <a href="standort.html">Standort</a>
+  </nav>
+</header>
+
+<main>
+<section class="section">
+  <div class="wrap section-head reveal">
+    <p class="eyebrow">Galerie</p>
+    <h1 class="h1">Ein Blick in den Laden</h1>
+    <p class="lead">Industrielles Fabrik-Flair, volle Regale und Mode zum Anfassen. Klick auf ein Bild für die große Ansicht.</p>
+  </div>
+  <div class="wrap masonry">
+    <div class="photo reveal"><img src="assets/shop-overview.jpeg" alt="Überblick über den Verkaufsraum"></div>
+    <div class="photo reveal"><img src="assets/jeans-sign.jpeg" alt="Jeans Factory Holzschild über dem Regal"></div>
+    <div class="photo reveal"><img src="assets/rack-denim.jpeg" alt="Rack mit hellen Denim-Outfits"></div>
+    <div class="photo reveal"><img src="assets/mustang-wall.jpeg" alt="Mustang-Jeanswand"></div>
+    <div class="photo reveal"><img src="assets/mannequins.jpeg" alt="Schaufensterfiguren mit Sommeroutfits"></div>
+    <div class="photo reveal"><img src="assets/denim-column.jpeg" alt="Denim-Rack an der Betonsäule"></div>
+    <div class="photo reveal"><img src="assets/outfits-wall.jpeg" alt="Outfit-Kombinationen an der Gitterwand"></div>
+    <div class="photo reveal"><img src="assets/rack-mint.jpeg" alt="Rack mit mintgrünen Teilen"></div>
+    <div class="photo reveal"><img src="assets/herren-knit.jpeg" alt="Herren-Strickpolos"></div>
+    <div class="photo reveal"><img src="assets/rack-yellow.jpeg" alt="Rack mit gelben Sommerteilen"></div>
+    <div class="photo reveal"><img src="assets/herren-shirts.jpeg" alt="Herrenhemden am Rack"></div>
+    <div class="photo reveal"><img src="assets/slogan-tees.jpeg" alt="Shirts mit Sprüchen auf dem Tisch"></div>
+  </div>
+</section>
+</main>
+
+<div class="lightbox" id="lightbox"><img src="" alt=""></div>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="logo-chip" href="index.html" style="margin-bottom: 16px;"><img src="assets/logo-jeansfactory.png" alt="Jeans Factory" style="height: 38px;"></a>
+      <p class="muted" style="max-width: 320px;">Jeans, Outfits und Accessoires mit persönlicher Beratung – mitten in Albstadt-Ebingen.</p>
+    </div>
+    <div>
+      <h3 class="h3">Kontakt</h3>
+      <p><a href="tel:+49743158688">+49 7431 58688</a></p>
+      <p><a href="https://wa.me/49743158688">WhatsApp</a></p>
+      <p><a href="mailto:jeansfactory@modehaus-alber.de">jeansfactory@modehaus-alber.de</a></p>
+      <p class="muted">Keplerstraße 24<br>72458 Albstadt-Ebingen</p>
+    </div>
+    <div>
+      <h3 class="h3">Seiten</h3>
+      <p><a href="ueber-uns.html">Über uns</a></p>
+      <p><a href="events.html">Events</a></p>
+      <p><a href="galerie.html">Galerie</a></p>
+      <p><a href="oeffnungszeiten.html">Öffnungszeiten</a></p>
+      <p><a href="standort.html">Standort</a></p>
+      <p><a href="impressum.html">Impressum</a></p>
+    </div>
+  </div>
+  <div class="wrap footer-note">
+    <span>© 2026 Jeans Factory · for every body</span>
+    <span>Albstadt-Ebingen</span>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+<script>
+(function () {
+  var lb = document.getElementById('lightbox');
+  var lbImg = lb.querySelector('img');
+  document.querySelectorAll('.masonry .photo img').forEach(function (img) {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', function () {
+      lbImg.src = img.src; lbImg.alt = img.alt;
+      lb.classList.add('open');
+    });
+  });
+  lb.addEventListener('click', function () { lb.classList.remove('open'); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') lb.classList.remove('open'); });
+})();
+</script>
+</body>
+</html>
