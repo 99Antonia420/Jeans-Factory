@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; frame-src https://www.google.com; connect-src 'self'; form-action 'self'; base-uri 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Galerie | Jeans Factory Albstadt-Ebingen</title>
 <link rel="stylesheet" href="site.css">
 <style>
@@ -127,20 +129,5 @@
 </footer>
 
 <script src="site.js"></script>
-<script>
-(function () {
-  var lb = document.getElementById('lightbox');
-  var lbImg = lb.querySelector('img');
-  document.querySelectorAll('.masonry .photo img').forEach(function (img) {
-    img.style.cursor = 'zoom-in';
-    img.addEventListener('click', function () {
-      lbImg.src = img.src; lbImg.alt = img.alt;
-      lb.classList.add('open');
-    });
-  });
-  lb.addEventListener('click', function () { lb.classList.remove('open'); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') lb.classList.remove('open'); });
-})();
-</script>
 </body>
 </html>
