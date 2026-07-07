@@ -1,5 +1,165 @@
 /* Jeans Factory — Industrial dark site styles */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap');
+/* Selbst gehostete Schriften (keine Anfragen an Google-Server) */
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/bebas-neue-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/bebas-neue-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/caveat-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/caveat-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(assets/fonts/caveat-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(assets/fonts/caveat-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/inter-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/inter-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/inter-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/inter-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/fonts/inter-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/fonts/inter-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(assets/fonts/inter-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(assets/fonts/inter-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/oswald-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/oswald-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/fonts/oswald-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/fonts/oswald-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(assets/fonts/oswald-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(assets/fonts/oswald-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 :root {
   --ink: #0E0E10;
@@ -131,9 +291,6 @@ a { color: inherit; }
 .section-head { display: grid; gap: 12px; margin-bottom: 44px; max-width: 720px; }
 
 @media (max-width: 840px) {
-  .wrap[style*="grid-template-columns"],
-  form[style*="grid"] div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
-  .wrap div[style*="repeat(3, 1fr)"] { grid-template-columns: 1fr 1fr !important; }
   .section { padding: 56px 0; }
 }
 
@@ -313,3 +470,114 @@ a { color: inherit; }
   padding: 13px 14px;
 }
 .field input:focus, .field textarea:focus { outline: none; border-color: var(--denim-light); }
+
+/* ---------- Galerie (galerie.html) ---------- */
+.masonry { columns: 3; column-gap: 18px; }
+.masonry .photo { margin-bottom: 18px; break-inside: avoid; }
+@media (max-width: 900px) { .masonry { columns: 2; } }
+@media (max-width: 560px) { .masonry { columns: 1; } }
+.lightbox {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(14,14,16,0.94);
+  display: none; align-items: center; justify-content: center;
+  padding: 40px; cursor: zoom-out;
+}
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+/* ---------- Aus Inline-Styles generierte Utility-Klassen (CSP: style-src 'self') ---------- */
+.u1 { margin-bottom: 24px !important; }
+.u2 { margin-bottom: 44px !important; }
+.u3 { aspect-ratio: 16/7 !important; }
+.u4 { margin-bottom: 28px !important; }
+.u5 { aspect-ratio: 3/4 !important; }
+.u6 { aspect-ratio: 3/4 !important; transition-delay: .1s !important; }
+.u7 { aspect-ratio: 3/4 !important; transition-delay: .2s !important; }
+.u8 { padding: 40px !important; display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 24px !important; flex-wrap: wrap !important; }
+.u9 { margin-bottom: 8px !important; }
+.u10 { display: flex !important; gap: 14px !important; flex-wrap: wrap !important; }
+.u11 { margin-bottom: 16px !important; }
+.u12 { height: 38px !important; }
+.u13 { max-width: 320px !important; }
+.u14 { margin-bottom: 10px !important; }
+.u15 { display: flex !important; gap: 14px !important; flex-wrap: wrap !important; margin-top: 8px !important; }
+.u16 { margin-bottom: 32px !important; }
+.u17 { font-size: 0.6em !important; letter-spacing: 0.06em !important; }
+.u18 { background: var(--ink-2) !important; border-top: 1px solid var(--line) !important; }
+.u19 { max-width: 760px !important; }
+.u20 { margin: 12px 0 40px !important; }
+.u21 { margin-bottom: 12px !important; }
+.u22 { position: relative !important; min-height: 82vh !important; display: flex !important; align-items: flex-end !important; overflow: hidden !important; }
+.u23 { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; object-fit: cover !important; }
+.u24 { position: absolute !important; inset: 0 !important; background: linear-gradient(180deg, rgba(14,14,16,0.55) 0%, rgba(14,14,16,0.25) 40%, rgba(14,14,16,0.92) 100%) !important; }
+.u25 { position: relative !important; padding-top: 96px !important; padding-bottom: 72px !important; }
+.u26 { margin: 10px 0 6px !important; }
+.u27 { max-width: 560px !important; margin-top: 18px !important; color: var(--bone) !important; }
+.u28 { display: flex !important; gap: 14px !important; flex-wrap: wrap !important; margin-top: 30px !important; }
+.u29 { display: grid !important; grid-template-columns: 1.1fr 1fr !important; gap: 56px !important; align-items: center !important; }
+.u30 { margin: 12px 0 18px !important; }
+.u31 { margin-bottom: 14px !important; }
+.u32 { display: flex !important; gap: 10px !important; flex-wrap: wrap !important; margin-top: 24px !important; }
+.u33 { margin-top: 28px !important; }
+.u34 { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 18px !important; }
+.u35 { aspect-ratio: 4/5 !important; }
+.u36 { aspect-ratio: 4/5 !important; transition-delay: .1s !important; }
+.u37 { aspect-ratio: 4/5 !important; transition-delay: .2s !important; }
+.u38 { text-align: center !important; margin-top: 28px !important; }
+.u39 { background: var(--ink-2) !important; border-top: 1px solid var(--line) !important; border-bottom: 1px solid var(--line) !important; }
+.u40 { margin: 8px 0 16px !important; }
+.u41 { margin-top: 24px !important; }
+.u42 { aspect-ratio: 4/3 !important; }
+.u43 { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 56px !important; align-items: start !important; }
+.u44 { margin: 12px 0 20px !important; }
+.u45 { padding: 32px !important; }
+.u46 { margin-bottom: 20px !important; }
+.u47 { display: grid !important; gap: 12px !important; }
+.u48 { display: grid !important; grid-template-columns: 1fr 1.1fr !important; gap: 56px !important; align-items: center !important; }
+.u49 { padding: 36px !important; }
+.u50 { margin-bottom: 4px !important; }
+.u51 { font-size: 14px !important; margin-bottom: 14px !important; }
+.u52 { margin-top: 20px !important; font-size: 14px !important; }
+.u53 { padding: 36px !important; transition-delay: .1s !important; }
+.u54 { margin-top: 20px !important; }
+.u55 { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 56px !important; align-items: start !important; margin-top: 56px !important; }
+.u56 { aspect-ratio: 4/3 !important; margin-bottom: 28px !important; }
+.u57 { margin-bottom: 18px !important; }
+.u58 { position: relative !important; min-height: 70vh !important; display: flex !important; align-items: flex-end !important; overflow: hidden !important; }
+.u59 { position: absolute !important; inset: 0 !important; background: linear-gradient(180deg, rgba(14,14,16,0.72) 0%, rgba(14,14,16,0.45) 45%, rgba(14,14,16,0.94) 100%) !important; }
+.u60 { position: relative !important; padding-top: 96px !important; padding-bottom: 64px !important; }
+.u61 { display: inline-block !important; background: rgba(14,14,16,0.72) !important; padding: 8px 14px !important; border-radius: 2px !important; }
+.u62 { margin: 10px 0 6px !important; font-size: clamp(48px, 8vw, 108px) !important; }
+.u63 { max-width: 580px !important; margin-top: 18px !important; color: var(--bone) !important; }
+.u64 { transition-delay: .1s !important; }
+.u65 { transition-delay: .2s !important; }
+.u66 { display: flex !important; gap: 10px !important; flex-wrap: wrap !important; margin-top: 36px !important; }
+.u67 { aspect-ratio: 16/10 !important; }
+.u68 { border: 0 !important; width: 100% !important; height: 100% !important; display: block !important; filter: grayscale(0.35) contrast(1.05) !important; }
+.u69 { margin: 16px 0 !important; }
+.u70 { display: grid !important; grid-template-columns: 1.2fr 1fr !important; gap: 40px !important; align-items: start !important; }
+.u71 { display: flex !important; gap: 14px !important; flex-wrap: wrap !important; margin-top: 18px !important; }
+.u72 { margin: 72px 0 28px !important; }
+.u73 { display: grid !important; gap: 20px !important; }
+.u74 { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 20px !important; }
+.u75 { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 56px !important; align-items: center !important; }
+.u76 { margin-bottom: 36px !important; }
+.u77 { margin-bottom: 22px !important; }
+.u78 { display: flex !important; gap: 10px !important; flex-wrap: wrap !important; }
+.u79 { display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 24px !important; flex-wrap: wrap !important; }
+.u80 { margin: 6px 0 10px !important; }
+.u81 { max-width: 520px !important; }
+
+@media (max-width: 840px) {
+  .wrap.u29,
+  .wrap.u43,
+  .wrap.u48,
+  .wrap.u55,
+  .wrap.u70,
+  .wrap.u75,
+  form .u43,
+  form .u55,
+  form .u74,
+  form .u75 { grid-template-columns: 1fr !important; }
+  .wrap .u34 { grid-template-columns: 1fr 1fr !important; }
+}

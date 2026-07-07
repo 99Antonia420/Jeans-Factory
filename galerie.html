@@ -3,22 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; frame-src https://www.google.com; connect-src 'self'; form-action 'self'; base-uri 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Galerie | Jeans Factory Albstadt-Ebingen</title>
 <link rel="stylesheet" href="site.css">
-<style>
-.masonry { columns: 3; column-gap: 18px; }
-.masonry .photo { margin-bottom: 18px; break-inside: avoid; }
-@media (max-width: 900px) { .masonry { columns: 2; } }
-@media (max-width: 560px) { .masonry { columns: 1; } }
-.lightbox {
-  position: fixed; inset: 0; z-index: 100;
-  background: rgba(14,14,16,0.94);
-  display: none; align-items: center; justify-content: center;
-  padding: 40px; cursor: zoom-out;
-}
-.lightbox.open { display: flex; }
-.lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; }
-</style>
 </head>
 <body>
 
@@ -42,13 +30,13 @@
     <p class="eyebrow">Galerie</p>
     <h1 class="h1">Ein Blick in unsere Läden</h1>
     <p class="lead">Industrielles Fabrik-Flair in der Jeans Factory, Schnäppchen bei Jeans&amp;Mode. Klick auf ein Bild für die große Ansicht.</p>
-    <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 8px;">
+    <div class="u15">
       <a class="btn btn-ghost" href="#jeansfactory">Jeans Factory</a>
       <a class="btn btn-ghost" href="#jeansmode">Jeans&amp;Mode Schnäppchenladen</a>
     </div>
   </div>
-  <div class="wrap section-head reveal" style="margin-bottom: 32px;">
-    <h2 class="h2">Jeans Factory <span class="muted" style="font-size: 0.6em; letter-spacing: 0.06em;">· Keplerstraße 24</span></h2>
+  <div class="wrap section-head reveal u16">
+    <h2 class="h2">Jeans Factory <span class="muted u17">· Keplerstraße 24</span></h2>
   </div>
   <div class="wrap masonry">
     <div class="photo reveal"><img src="assets/shop-overview.jpeg" alt="Überblick über den Verkaufsraum"></div>
@@ -66,10 +54,10 @@
   </div>
 </section>
 
-<section class="section" id="jeansmode" style="background: var(--ink-2); border-top: 1px solid var(--line);">
-  <div class="wrap section-head reveal" style="margin-bottom: 32px;">
+<section class="section u18" id="jeansmode">
+  <div class="wrap section-head reveal u16">
     <p class="eyebrow">Schnäppchenladen</p>
-    <h2 class="h2">Jeans&amp;Mode <span class="muted" style="font-size: 0.6em; letter-spacing: 0.06em;">· Ludwigstraße 27</span></h2>
+    <h2 class="h2">Jeans&amp;Mode <span class="muted u17">· Ludwigstraße 27</span></h2>
     <p class="muted">Wo aktuelle Mode preiswert ist – Restposten, Sale und Neuware im frisch renovierten Laden. <a href="schnaeppchenladen.html">Mehr über Jeans&amp;Mode</a></p>
   </div>
   <div class="wrap masonry">
@@ -99,8 +87,8 @@
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div>
-      <a class="logo-chip" href="index.html" style="margin-bottom: 16px;"><img src="assets/logo-jeansfactory.png" alt="Jeans Factory" style="height: 38px;"></a>
-      <p class="muted" style="max-width: 320px;">Jeans, Outfits und Accessoires mit persönlicher Beratung – mitten in Albstadt-Ebingen.</p>
+      <a class="logo-chip u11" href="index.html"><img class="u12" src="assets/logo-jeansfactory.png" alt="Jeans Factory"></a>
+      <p class="muted u13">Jeans, Outfits und Accessoires mit persönlicher Beratung – mitten in Albstadt-Ebingen.</p>
     </div>
     <div>
       <h3 class="h3">Kontakt</h3>
@@ -127,20 +115,5 @@
 </footer>
 
 <script src="site.js"></script>
-<script>
-(function () {
-  var lb = document.getElementById('lightbox');
-  var lbImg = lb.querySelector('img');
-  document.querySelectorAll('.masonry .photo img').forEach(function (img) {
-    img.style.cursor = 'zoom-in';
-    img.addEventListener('click', function () {
-      lbImg.src = img.src; lbImg.alt = img.alt;
-      lb.classList.add('open');
-    });
-  });
-  lb.addEventListener('click', function () { lb.classList.remove('open'); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') lb.classList.remove('open'); });
-})();
-</script>
 </body>
 </html>
